@@ -38,7 +38,7 @@ public class Main {
         System.out.println("Please choose an option:\n" +
                 "(1) Add name and email.\n" +
                 "(2) Search for name and get email.\n" +
-                "(3) Add another email to an existing name.\n" +
+                "(3) Replace email to an existing name.\n" +
                 "(0) Exit.");
         int option = input.nextInt();
         return option;

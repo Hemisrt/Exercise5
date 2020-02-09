@@ -47,7 +47,7 @@ public class AddressBook {
                 System.out.println("That name is not in the book, please try again: ");
                 name = input.nextLine();
             }
-            System.out.println("Add another email for the name: " + name + ": ");
+            System.out.println("Replace a new email for the name: " + name + ": ");
             String anotherEmail = email.nextLine();
             entry.setValue(anotherEmail);
             System.out.println("Email for the name: " + name + ", has been replaced.\n");
@@ -64,7 +64,7 @@ public class AddressBook {
                 System.out.println("That name is not in the book, please try again: ");
                 name = input.nextLine();
             }
-            System.out.println(name + " email: " + entry.getValue() + "\n");
+            System.out.println(name + ", Email: " + entry.getValue() + "\n");
         }
     }
 }

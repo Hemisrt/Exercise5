@@ -92,6 +92,7 @@ public class AddressBook {
 
     // search() - Asks user to enter the name from the HashMap(address book) and displays the email to the user.
     public static void search() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Type in a name 'First Last' with exact casing(Ex: John Doe): ");
         String name = input.nextLine();
 

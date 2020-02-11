@@ -5,12 +5,48 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class AddressBook {
+
+    public static void main(String[] args) {
+        int prompt = menu();
+        while (prompt != 0) {
+            switch (prompt) {
+                case 1:
+                    AddressBook.addInformation();
+                    prompt = menu();
+                    break;
+                case 2:
+                    AddressBook.search();
+                    prompt = menu();
+                    break;
+                case 3:
+                    AddressBook.replaceEmail();
+                    prompt = menu();
+                    break;
+                default:
+                    System.out.println("That is not an option, please ask again.");
+                    prompt = menu();
+                    break;
+            }
+        }
+    }
     // Methods
+
+    // Menu - Provides a list of options
+    public static int menu() {
+        System.out.println("Please choose an option:\n" +
+                "(1) Add name and email.\n" +
+                "(2) Search for name and get email.\n" +
+                "(3) Replace email to an existing name.\n" +
+                "(0) Exit.");
+        int option = input.nextInt();
+        return option;
+    }
+
     // Scanner
     public static Scanner input = new Scanner(System.in);
 
     // Class field from the PersonInfo class
-    public static PersonInfo person;
+    public static Person person;
 
     // HashMap - The address book contains the Key which is the name and the Value which is the email
     public static Map<String, String> book = new HashMap<>();
@@ -27,7 +63,7 @@ public class AddressBook {
         System.out.println("Enter email: ");
         String email = address.nextLine();
 
-        person = new PersonInfo(name, email);
+        person = new Person(name, email);
         System.out.println("\nAdding name and email to the address book...");
         book.put(person.getName(), person.getEmail());
         System.out.println("The Name: " + person.getName() + " and Email: " + person.getEmail() + ", has been added to the address book.\n");

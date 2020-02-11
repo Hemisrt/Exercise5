@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class AddressBook {
-
+    // Trenton Greenlee
+    // 2/8/2020
+    // Exercise 5
     public static void main(String[] args) {
         int prompt = menu();
         while (prompt != 0) {
@@ -60,7 +62,7 @@ public class AddressBook {
         System.out.println("Enter first and last name(Ex: John Doe): ");
         String name = input.nextLine();
 
-        System.out.println("Enter email: ");
+        System.out.println("Enter email(Ex: name@email.com): ");
         String email = address.nextLine();
 
         person = new Person(name, email);
@@ -83,7 +85,7 @@ public class AddressBook {
                 System.out.println("That name is not in the book, please try again: ");
                 name = input.nextLine();
             }
-            System.out.println("Replace a new email for the name: " + name + ": ");
+            System.out.println("Replace a new email for the name(Ex: name@email.com): " + name + ": ");
             String anotherEmail = email.nextLine();
             entry.setValue(anotherEmail);
             System.out.println("Email for the name: " + name + ", has been replaced.\n");
